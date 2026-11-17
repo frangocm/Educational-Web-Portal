@@ -1,0 +1,334 @@
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color:#0f172a;
+  background: linear-gradient(120deg, #d9ecff 0%, #f2f5ff 35%, #ffd7e7 100%);
+  min-height: 100vh;
+}
+
+a{ color:inherit; text-decoration:none; }
+a:hover{ opacity: .85; }
+
+.wrapper{
+  width:100%;
+  padding: 40px 18px;
+  display:flex;
+  justify-content:center;
+}
+
+.shell{
+  width: 1100px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+  padding: 34px 34px 30px;
+}
+
+.header{
+  text-align:center;
+  padding: 12px 0 26px;
+}
+
+.page-title{
+  margin: 0;
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.title-line{
+  width: 320px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8fd3ff, #ffb0d1);
+}
+
+.main{
+  display:flex;
+  gap: 34px;
+  align-items: stretch;
+  padding-top: 10px;
+}
+
+.sidebar{
+  width: 330px;
+  padding: 16px;
+}
+
+.nav{
+  display:flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.navbtn{
+  height: 74px;
+  border-radius: 20px;
+  display:flex;
+  align-items:center;
+  padding: 0 26px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: #ffffff;
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 12px 28px rgba(15,23,42,0.08);
+}
+
+.navbtn.active{
+  background: linear-gradient(90deg, #cfe9ff, #f7dcff, #ffd7e7);
+  border: 0;
+}
+
+.content{
+  flex: 1;
+  padding: 14px 26px 10px;
+  border-left: 1px solid rgba(15,23,42,0.06);
+}
+
+.h2{
+  margin: 16px 0 10px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.p{
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(15,23,42,0.72);
+}
+
+.bold{ font-weight: 800; color: rgba(15,23,42,0.85); }
+
+.card{
+  margin: 18px 0;
+  padding: 18px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,0.06);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(15,23,42,0.06);
+}
+
+.tools{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(15,23,42,0.65);
+}
+
+.tool-link{
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: rgba(255,255,255,0.75);
+}
+
+.formbox{
+  max-width: 520px;
+  margin: 10px auto 0;   
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,0.06);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(15,23,42,0.06);
+}
+
+.label{ display:block; margin: 12px 0 8px; font-weight: 800; color: rgba(15,23,42,0.78); }
+.input, textarea{
+  width:100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.10);
+  background: rgba(245,247,255,0.7);
+  outline:none;
+  font-size: 16px;
+}
+textarea{ resize: vertical; }
+
+.btn{
+  margin-top: 18px;
+  padding: 16px 24px;     
+  border-radius: 16px;
+  border: 0;
+  cursor:pointer;
+
+  font-weight: 900;
+  font-size: 16px;        
+  line-height: 1.1;
+
+  color: #0f172a;
+  background: linear-gradient(90deg, #cfe9ff, #f7dcff, #ffd7e7);
+}
+
+.error{
+  margin: 0 0 12px;
+  color: #b42318;
+  font-weight: 700;
+}
+
+.top-link{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.top-link a{
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #2563eb; 
+  text-decoration: none;
+
+  background: linear-gradient(90deg, #cfe9ff, #f7dcff, #ffd7e7);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+}
+
+.footer{
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(15,23,42,0.08);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: rgba(15,23,42,0.70);
+}
+
+.footer-left{
+  font-weight: 800;
+  color: rgba(15,23,42,0.75);
+}
+
+.footer-left .sub{
+  font-weight: 600;
+  color: rgba(15,23,42,0.60);
+  margin-top: 4px;
+}
+
+.footer-right{
+  font-weight: 700;
+  color: rgba(15,23,42,0.65);
+}
+
+@media (max-width: 900px){
+  .top-link{ justify-content:center; }
+  .footer-inner{ flex-direction: column; text-align:center; }
+}
+
+
+   .user-card{
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  
+  .user-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap: 12px;
+  }
+  
+ 
+  .user-title{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+  }
+  
+  
+  .user-badge{
+    display:inline-block;
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    border: 1px solid rgba(15,23,42,0.10);
+    background: rgba(245,247,255,0.75);
+    color: rgba(15,23,42,0.72);
+  }
+  
+ 
+  .user-badge.tutor{
+    background: linear-gradient(90deg, #cfe9ff, #f7dcff, #ffd7e7);
+    border: 0;
+    color: rgba(15,23,42,0.85);
+  }
+  
+
+  .user-actions{
+    white-space: nowrap;
+    display:flex;
+    gap: 10px;
+    align-items:center;
+    margin-top: 2px;
+  }
+  
+  .user-actions a{
+    font-size: 13px;
+    font-weight: 600;                
+    color: rgba(15,23,42,0.55);        
+    padding: 6px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(15,23,42,0.08);
+    background: rgba(255,255,255,0.55);
+  }
+  .user-actions a:hover{
+    color: rgba(15,23,42,0.85);        
+    background: rgba(245,247,255,0.8);
+    box-shadow: 0 8px 18px rgba(15,23,42,0.08);
+  }
+  .user-actions a:hover{
+    box-shadow: 0 10px 22px rgba(15,23,42,0.08);
+  }
+  
+  
+  .user-meta{
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 6px;
+    column-gap: 10px;
+    font-size: 15px;
+    color: rgba(15,23,42,0.70);
+    line-height: 1.5;
+  }
+  
+  .user-meta .k{
+    font-weight: 900;
+    color: rgba(15,23,42,0.80);
+  }
+
+  
+.homework-title,
+.content .card h2{
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+
+.documents .card h2,
+.documents-title{
+  font-size: 21px;
+  font-weight: 700;
+}
+
